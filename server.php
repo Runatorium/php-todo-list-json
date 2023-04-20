@@ -1,22 +1,13 @@
 <?php
 
 $todoList = [
-    [
-        'nome' => 'task1',
-        'status' => true,
-    ],
-    [
-        'nome' => 'task2',
-        'status' => false,
-    ],
-    [
-        'nome' => 'task3',
-        'status' => false,
-    ],
-    [
-        'nome' => 'task4',
-        'status' => true,
-    ]
+
+    'task1',
+    'task2',
+    'task3',
+    'task4',
+
+
 ];
 
 if (isset($_POST['newtask'])) {
