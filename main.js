@@ -5,6 +5,7 @@ createApp({
         return {
             todoList: [],
             newtask: '',
+            status: '',
         }
     },
     methods: {
@@ -12,8 +13,9 @@ createApp({
             axios.get('server.php')
             .then(response => {
                 this.todoList = response.data;
-            })
+            });
         },
+
         addNewTask(){
             const data = {
                 newtask: this.newtask

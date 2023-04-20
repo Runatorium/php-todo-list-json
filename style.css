@@ -9,3 +9,7 @@
     margin-right: 10px;
     width: 175px;
 }
+
+.done{
+    text-decoration: line-through;
+}
