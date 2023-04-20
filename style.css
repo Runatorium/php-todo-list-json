@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.myStyleInput{
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 175px;
+}
