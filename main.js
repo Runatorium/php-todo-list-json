@@ -4,7 +4,13 @@ createApp({
     data() {
         return {
             todoList: [],
+
             newtask: '',
+
+            newTaskFinal: {
+                nome: "",
+                status: false
+            },
         }
     },
     methods: {
@@ -16,8 +22,9 @@ createApp({
         },
 
         addNewTask(){
+            this.newTaskFinal.nome = this.newtask;
             const data = {
-                newtask: this.newtask
+                newtask: this.newTaskFinal
             }
             axios.post('server.php', data,
             {
@@ -26,7 +33,7 @@ createApp({
             )
             .then(response => {
                 this.todoList = response.data;
-                this.newtask = '';
+                this.newTaskFinal.name = ''
             });
         },
     },
