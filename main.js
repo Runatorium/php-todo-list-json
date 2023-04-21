@@ -26,14 +26,12 @@ createApp({
             )
             .then(response => {
                 this.todoList = response.data;
-                this.newtask = '';
             });
         },
 
-       statusChange(index){
-        console.log(index);
+       trialfunction: function(index){
           const data = {
-           index
+           index: index
        }
         axios.post('server.php', data,
         {
