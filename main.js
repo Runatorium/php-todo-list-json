@@ -31,6 +31,7 @@ createApp({
         },
 
        statusChange(index){
+        console.log('asd');
           const data = {
            index
        }

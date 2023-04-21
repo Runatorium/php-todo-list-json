@@ -18,7 +18,7 @@
             <ul class="list-group">
                 <li v-for="(todo, index) in todoList" class="list-group-item" :key="index"
                     :class="{done : todo.status}">
-                    <p @click="statusChange(index)">{{todo.name}}</p>
+                    <p @click="statusChange">{{todo.name}}</p>
                 </li>
                 <div>
                     <label for="newtask">New Task</label>
