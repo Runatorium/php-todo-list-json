@@ -8,11 +8,14 @@ if (file_exists('database.json')) { //comunicare con il database json / se il da
 }
 
 if (isset($_POST['newtask'])) {
-    $todoList[] = $_POST['newtask'];
+    $todoList[] = [
+        'name' => $_POST['newtask'],
+        'status' => false
+    ];
 }
 
-$myNewContent = json_encode($todoList); //salvare il data della todolist in php sulla variabile $myNewContent
-file_put_contents('database.json', $myNewContent); //salvare sul database  in json il contenuto della variabile $myNewContent (database aggiornato)
+$myNewContent = json_encode($todoList);
+file_put_contents('database.json', $myNewContent);
 
 header('Content-Type: application/json');
 echo json_encode($todoList);
