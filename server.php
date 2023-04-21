@@ -13,6 +13,13 @@ if (isset($_POST['newtask'])) {
         'status' => false
     ];
 }
+if (isset($_POST['index'])) {
+    if ($todoList[$index]['status'] = true) {
+        $todoList[$index]['status'] = false;
+    } else {
+        $todoList[$index]['status'] = true;
+    }
+}
 
 $myNewContent = json_encode($todoList);
 file_put_contents('database.json', $myNewContent);

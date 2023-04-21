@@ -16,10 +16,10 @@
     <div id="app">
         <div class="container">
             <ul class="list-group">
-                <li v-for="todo in todoList" class="list-group-item" @click="statusChange"
+                <li v-for="(todo, index) in todoList" class="list-group-item" :key="index"
                     :class="{done : todo.status}">
-                    {{todo.name}}</li>
-
+                    <p @click="statusChange(index)">{{todo.name}}</p>
+                </li>
                 <div>
                     <label for="newtask">New Task</label>
                     <input name="newtask" class="myStyleInput" type="text" v-model="newtask">

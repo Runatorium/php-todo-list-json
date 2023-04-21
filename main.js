@@ -29,7 +29,22 @@ createApp({
                 this.newtask = '';
             });
         },
+
+       statusChange(index){
+          const data = {
+           index
+       }
+        axios.post('server.php', data,
+        {
+            headers: {'content-type': 'multipart/form-data' }
+        }
+        )
+        .then(response =>  {
+            this.todoList = response.data;
+        });
+        
     },
+},
     mounted() {
         this.readList();
     }
